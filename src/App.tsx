@@ -8,7 +8,7 @@ function App() {
       <div className="hidden min-[740px]:block">
         <SideBar />
       </div>
-      {/* <Main /> */}
+      <Main />
     </div>
   );
 }

@@ -5,7 +5,7 @@ import { GrAdd } from "react-icons/gr";
 
 const Header = () => {
   return (
-    <header className="bg-white px-[1.6rem] py-[2rem] flex justify-between items-center">
+    <header className="bg-white px-[1.6rem]  py-[2rem] flex justify-between items-center">
       <div className="flex items-center">
         <img src={logoMobile} alt="logo" />
         <p className="text-[1.8rem] mr-[.80rem] ml-[.80rem] text-[#000112] font-bold leading-normal">

@@ -1,5 +1,8 @@
 import "./ActiveBoard.css";
+import { useState } from "react";
+import TaskModal from "./TaskModal";
 const ActiveBoard = () => {
+  const [isOpen, setIsOpen] = useState(true);
   return (
     <div className="flex outline w-fit gap-[2.4rem] ml-[1.2rem]">
       {/* todo column */}
@@ -12,7 +15,13 @@ const ActiveBoard = () => {
           </span>
         </p>
         <ul className="flex flex-col gap-[2rem]">
-          <li className="py-[2.3rem] rounded-[.8rem] shadow-custom px-[1.6rem] bg-white w-[28rem]">
+          {isOpen && <TaskModal isOpen={isOpen} setIsOpen={setIsOpen} />}
+          <li
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}
+            className="cursor-pointer py-[2.3rem] rounded-[.8rem] shadow-custom px-[1.6rem] bg-white w-[28rem]"
+          >
             <p className="text-black mb-[.8rem] font-bold leading-normal text-[1.5rem]">
               Build UI for onboarding flow
             </p>
@@ -20,7 +29,7 @@ const ActiveBoard = () => {
               0 of 3 subtasks
             </p>
           </li>
-          <li className="py-[2.3rem] rounded-[.8rem] shadow-custom px-[1.6rem] bg-white w-[28rem]">
+          <li className="cursor-pointer py-[2.3rem] rounded-[.8rem] shadow-custom px-[1.6rem] bg-white w-[28rem]">
             <p className="text-black mb-[.8rem] font-bold leading-normal text-[1.5rem]">
               Build UI for onboarding flow
             </p>
@@ -28,7 +37,7 @@ const ActiveBoard = () => {
               0 of 3 subtasks
             </p>
           </li>
-          <li className="py-[2.3rem] rounded-[.8rem] shadow-custom px-[1.6rem] bg-white w-[28rem]">
+          <li className="cursor-pointer py-[2.3rem] rounded-[.8rem] shadow-custom px-[1.6rem] bg-white w-[28rem]">
             <p className="text-black mb-[.8rem] font-bold leading-normal text-[1.5rem]">
               Build UI for onboarding flow
             </p>
@@ -36,7 +45,7 @@ const ActiveBoard = () => {
               0 of 3 subtasks
             </p>
           </li>
-          <li className="py-[2.3rem] rounded-[.8rem] shadow-custom px-[1.6rem] bg-white w-[28rem]">
+          <li className="cursor-pointer py-[2.3rem] rounded-[.8rem] shadow-custom px-[1.6rem] bg-white w-[28rem]">
             <p className="text-black mb-[.8rem] font-bold leading-normal text-[1.5rem]">
               Build UI for onboarding flow
             </p>
@@ -57,7 +66,7 @@ const ActiveBoard = () => {
           </span>
         </p>
         <ul className="flex flex-col gap-[2rem]">
-          <li className="py-[2.3rem] rounded-[.8rem] shadow-custom px-[1.6rem] bg-white w-[28rem]">
+          <li className="cursor-pointer py-[2.3rem] rounded-[.8rem] shadow-custom px-[1.6rem] bg-white w-[28rem]">
             <p className="text-black mb-[.8rem] font-bold leading-normal text-[1.5rem]">
               Build UI for onboarding flow
             </p>
@@ -65,7 +74,7 @@ const ActiveBoard = () => {
               0 of 3 subtasks
             </p>
           </li>
-          <li className="py-[2.3rem] rounded-[.8rem] shadow-custom px-[1.6rem] bg-white w-[28rem]">
+          <li className="cursor-pointer py-[2.3rem] rounded-[.8rem] shadow-custom px-[1.6rem] bg-white w-[28rem]">
             <p className="text-black mb-[.8rem] font-bold leading-normal text-[1.5rem]">
               Build UI for onboarding flow
             </p>
@@ -73,7 +82,7 @@ const ActiveBoard = () => {
               0 of 3 subtasks
             </p>
           </li>
-          <li className="py-[2.3rem] rounded-[.8rem] shadow-custom px-[1.6rem] bg-white w-[28rem]">
+          <li className="cursor-pointer py-[2.3rem] rounded-[.8rem] shadow-custom px-[1.6rem] bg-white w-[28rem]">
             <p className="text-black mb-[.8rem] font-bold leading-normal text-[1.5rem]">
               Build UI for onboarding flow
             </p>
@@ -81,7 +90,7 @@ const ActiveBoard = () => {
               0 of 3 subtasks
             </p>
           </li>
-          <li className="py-[2.3rem] rounded-[.8rem] shadow-custom px-[1.6rem] bg-white w-[28rem]">
+          <li className="cursor-pointer py-[2.3rem] rounded-[.8rem] shadow-custom px-[1.6rem] bg-white w-[28rem]">
             <p className="text-black mb-[.8rem] font-bold leading-normal text-[1.5rem]">
               Build UI for onboarding flow
             </p>
@@ -103,7 +112,7 @@ const ActiveBoard = () => {
           </span>
         </p>
         <ul className="flex flex-col gap-[2rem]">
-          <li className="py-[2.3rem] rounded-[.8rem] shadow-custom px-[1.6rem] bg-white w-[28rem]">
+          <li className="cursor-pointer py-[2.3rem] rounded-[.8rem] shadow-custom px-[1.6rem] bg-white w-[28rem]">
             <p className="text-black mb-[.8rem] font-bold leading-normal text-[1.5rem]">
               Build UI for onboarding flow
             </p>
@@ -111,7 +120,7 @@ const ActiveBoard = () => {
               0 of 3 subtasks
             </p>
           </li>
-          <li className="py-[2.3rem] rounded-[.8rem] shadow-custom px-[1.6rem] bg-white w-[28rem]">
+          <li className="cursor-pointer py-[2.3rem] rounded-[.8rem] shadow-custom px-[1.6rem] bg-white w-[28rem]">
             <p className="text-black mb-[.8rem] font-bold leading-normal text-[1.5rem]">
               Build UI for onboarding flow
             </p>
@@ -119,7 +128,7 @@ const ActiveBoard = () => {
               0 of 3 subtasks
             </p>
           </li>
-          <li className="py-[2.3rem] rounded-[.8rem] shadow-custom px-[1.6rem] bg-white w-[28rem]">
+          <li className="cursor-pointer py-[2.3rem] rounded-[.8rem] shadow-custom px-[1.6rem] bg-white w-[28rem]">
             <p className="text-black mb-[.8rem] font-bold leading-normal text-[1.5rem]">
               Build UI for onboarding flow
             </p>
@@ -127,7 +136,7 @@ const ActiveBoard = () => {
               0 of 3 subtasks
             </p>
           </li>
-          <li className="py-[2.3rem] rounded-[.8rem] shadow-custom px-[1.6rem] bg-white w-[28rem]">
+          <li className="cursor-pointer py-[2.3rem] rounded-[.8rem] shadow-custom px-[1.6rem] bg-white w-[28rem]">
             <p className="text-black mb-[.8rem] font-bold leading-normal text-[1.5rem]">
               Build UI for onboarding flow
             </p>
