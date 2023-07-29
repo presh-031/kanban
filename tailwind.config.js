@@ -5,7 +5,11 @@ export default {
     extend: {
       colors: {
         "main-purple": "#635FC7",
+
+        "light-grey": "#F4F7FD",
         "medium-grey": "#828fa3",
+
+        "lines-light": "#E4EBFA",
       },
     },
   },
