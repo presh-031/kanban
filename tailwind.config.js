@@ -10,6 +10,8 @@ export default {
         "medium-grey": "#828fa3",
 
         "lines-light": "#E4EBFA",
+
+        black: "#000112",
       },
     },
   },
