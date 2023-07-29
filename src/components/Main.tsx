@@ -9,16 +9,15 @@ const Main = () => {
   const { isVisible, toggleModal } = useModal();
 
   return (
-    <div className="flex min-h-screen flex-col border-[10px] border-red-800 min-w-full">
+    <div className="flex min-h-screen flex-col  min-w-full">
       <Header />
 
       <main
         className={`${
           isBoardEmpty ? "grid place-items-center" : ""
-        } bg-light-grey flex-1 h-full outline overflow-x-scroll `}
+        } bg-light-grey flex-1 h-full  overflow-x-scroll `}
       >
         {isBoardEmpty ? <EmptyBoard /> : <ActiveBoard />}
-        {/* <EmptyBoard /> */}
       </main>
     </div>
   );

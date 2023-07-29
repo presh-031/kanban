@@ -1,5 +1,3 @@
-import React from "react";
-
 const EmptyBoard = () => {
   return (
     <div className=" w-[34.3rem] mx-auto  text-center">
