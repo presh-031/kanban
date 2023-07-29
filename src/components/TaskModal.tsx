@@ -1,61 +1,34 @@
-import { useState, Fragment } from "react";
-import { Dialog, Transition } from "@headlessui/react";
-
-export default function TaskModal({ isOpen, setIsOpen }) {
-  //   const [isOpen, setIsOpen] = useState(true);
-
+const TaskModal = ({ hideModal }) => {
   return (
-    <Transition
-      show={isOpen}
-      enter="transition duration-100 ease-out"
-      enterFrom="transform scale-95 opacity-0"
-      enterTo="transform scale-100 opacity-100"
-      leave="transition duration-75 ease-out"
-      leaveFrom="transform scale-100 opacity-100"
-      leaveTo="transform scale-95 opacity-0"
-      as={Fragment}
+    <div
+      onClick={hideModal}
+      className="overlay fixed left-0 top-0 z-[500] h-screen w-full bg-black bg-opacity-50"
     >
-      <Dialog
-        open={isOpen}
-        onClose={() => setIsOpen(true)}
-        className="relative z-50"
-      >
-        {/* The backdrop, rendered as a fixed sibling to the panel container */}
+      <div className="wrapper fixed left-0 top-[14%] bottom-[10%] z-[1000] flex max-h-screen w-full justify-center overflow-y-auto overflow-x-hidden">
         <div
-          className="fixed w-screen overflow-hidden inset-0 bg-black/30"
-          aria-hidden="true"
-        />
+          onClick={(e) => {
+            e.stopPropagation();
+            hideModal();
+          }}
+          className="modal relative z-[1000] mx-[2.4rem] h-fit rounded-[0.8rem] bg-white p-[3.2rem] sm:mx-[11.4rem] min-[700px]:p-[4.8rem]"
+        >
+          <p className="mb-[1.6rem] text-[2.4rem] font-bold leading-[2.8rem] tracking-[0.086rem] text-black sm:mb-[2.4rem]  sm:text-[3.2rem] sm:leading-[3.6rem] sm:tracking-[.14rem] ">
+            <span className="sm:block">THANK YOU</span> FOR YOUR ORDER
+          </p>
 
-        {/* Full-screen container to center the panel */}
-        <div className="fixed w-screen  overflow-hidden h-screen inset-0 flex items-center justify-center p-4">
-          {/* The actual dialog panel  */}
-          <Dialog.Panel className="mx-auto max-w-sm w-[34.4rem] rounded bg-white">
-            <Dialog.Title className="font-bold text-[1.8rem] leading-normal text-black mb-[2.4rem]">
-              Research pricing points of various competitors and trial different
-              business models
-            </Dialog.Title>
-            <Dialog.Description>
-              We know what we're planning to build for version one. Now we need
-              to finalise the first pricing model we'll use. Keep iterating the
-              subtasks until we have a coherent proposition.
-            </Dialog.Description>
-
-            <div>
-              <p>Subtasks (2 of 3)</p>
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-
-              <p>Current Status</p>
-            </div>
-
-            <button onClick={() => setIsOpen(false)}>Deactivate</button>
-            <button onClick={() => setIsOpen(false)}>Cancel</button>
-          </Dialog.Panel>
+          <button
+            role="button"
+            onClick={() => {
+              hideModal();
+            }}
+            className="mt-[2.3rem] w-full bg-[#D87D4A] py-[1.5rem] text-[1.3rem] font-bold leading-[1.776rem] tracking-[0.1rem] text-white  hover:bg-[#FBAF85] sm:mt-[4.6rem]"
+          >
+            BACK TO HOME
+          </button>
         </div>
-      </Dialog>
-    </Transition>
+      </div>
+    </div>
   );
-}
+};
+
+export default TaskModal;
