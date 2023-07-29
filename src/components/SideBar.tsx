@@ -1,6 +1,9 @@
 import darkLogo from "../assets/assets/logo-dark.svg";
 import hideSideBar from "../assets/assets/icon-hide-sidebar.svg";
 import boardIcon from "../assets/assets/icon-board.svg";
+import lightThemeIcon from "../assets/assets/icon-light-theme.svg";
+import darkThemeIcon from "../assets/assets/icon-dark-theme.svg";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 const SideBar = () => {
   return (
@@ -67,11 +70,17 @@ const SideBar = () => {
 
       <div>
         <div>
-          {/* mcolor mode switcher */}
-          <div className="mb-[2.4rem]"></div>
+          {/* color mode switcher */}
+          <div className="mb-[2.4rem] flex gap-8 items-center justify-center">
+            <img src={lightThemeIcon} alt="light" />
+            <ThemeSwitcher />
+            <img src={darkThemeIcon} alt="dark" />
+          </div>
           <div className="flex items-center gap-[1.5rem] ml-[3.1rem]">
             <img src={hideSideBar} alt="hide-sidebar" />
-            <p>Hide Sidebar</p>
+            <p className="font-bold text-[1.5rem] text-medium-grey leading-normal ">
+              Hide Sidebar
+            </p>
           </div>
         </div>
       </div>
