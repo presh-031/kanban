@@ -4,7 +4,7 @@ import SideBar from "./components/SideBar";
 
 function App() {
   return (
-    <div className="flex">
+    <div className="flex  overflow-x-scroll">
       <div className="hidden min-[740px]:block">
         <SideBar />
       </div>

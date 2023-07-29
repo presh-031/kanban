@@ -2,7 +2,7 @@ import React from "react";
 
 const EmptyBoard = () => {
   return (
-    <div className=" w-[34.3rem] text-center">
+    <div className=" w-[34.3rem] mx-auto  text-center">
       {" "}
       <p className="mb-[2.5rem] text-medium-grey text-[1.8rem] font-bold leading-normal ">
         This board is empty. Create a new column to get started.
