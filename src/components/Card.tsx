@@ -9,8 +9,8 @@ const Card = () => {
 
   return (
     <div>
-      <Modal isVisible={isVisible} hideModal={toggleModal}>
-        <TaskModal hideTaskModal={toggleModal} />
+      <Modal isVisible={isVisible}>
+        <TaskModal toggleModal={toggleModal} />
       </Modal>
 
       <li

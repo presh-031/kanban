@@ -1,11 +1,11 @@
-import { taskModalType } from "../typings";
+import { TaskModalTypes } from "../typings";
 
 import verticalEllipsis from "../assets/assets/icon-vertical-ellipsis.svg";
-const TaskModal = ({ hideTaskModal }: taskModalType) => {
+const TaskModal = ({ toggleModal }: TaskModalTypes) => {
   return (
     <div
       onClick={() => {
-        // hideTaskModal();
+        toggleModal(false);
       }}
       className="overlay fixed left-0 top-0 right-0 z-[500] h-screen  bg-black bg-opacity-50"
     >
