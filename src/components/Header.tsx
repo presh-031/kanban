@@ -18,12 +18,12 @@ const Header = ({ isBoardEmpty }: HeaderTypes) => {
         <button
           role="button"
           disabled={isBoardEmpty}
-          className="py-[1.5rem] disabled:opacity-25 disabled:cursor-not-allowed flex items-center justify-center px-[2.5rem] text-white rounded-[2.4rem] bg-main-purple  font-bold leading-normal"
+          className="py-[1.5rem] transition-all duration-300 hover:bg-main-purple-hover disabled:opacity-25 disabled:cursor-not-allowed flex items-center justify-center px-[2.5rem] text-white rounded-[2.4rem] bg-main-purple  font-bold leading-normal"
         >
-          <GrAdd className="text-2xl" />
+          <span className="text-3xl">+</span>
           <span className="hidden sm:block text-[1.5rem]">Add New Task</span>
         </button>
-        <img src={verticalEllipsis} alt="menu" />
+        <img src={verticalEllipsis} alt="menu" className="  cursor-pointer" />
       </div>
     </header>
   );
