@@ -6,11 +6,9 @@ import useModal from "../hooks/useModal";
 const Main = () => {
   const isBoardEmpty = false;
 
-  const { isVisible, toggleModal } = useModal();
-
   return (
     <div className="flex min-h-screen flex-col  min-w-full">
-      <Header />
+      <Header isBoardEmpty={isBoardEmpty} />
 
       <main
         className={`${

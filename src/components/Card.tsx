@@ -11,12 +11,12 @@ const Card = () => {
   return (
     <div>
       <Modal isVisible={isVisible} hideModal={toggleModal}>
-        <TaskModal hideModal={toggleModal} />
+        <TaskModal hideTaskModal={toggleModal} />
       </Modal>
 
       <li
         onClick={() => {
-          toggleModal(!isVisible);
+          toggleModal();
         }}
         className="cursor-pointer py-[2.3rem] rounded-[.8rem] shadow-custom px-[1.6rem] bg-white w-[28rem]"
       >

@@ -1,11 +1,11 @@
 import { taskModalType } from "../typings";
 
 import verticalEllipsis from "../assets/assets/icon-vertical-ellipsis.svg";
-const TaskModal = ({ hideModal }: taskModalType) => {
+const TaskModal = ({ hideTaskModal }: taskModalType) => {
   return (
     <div
       onClick={() => {
-        hideModal();
+        hideTaskModal();
       }}
       className="overlay fixed left-0 top-0 right-0 z-[500] h-screen  bg-black bg-opacity-50"
     >
@@ -14,7 +14,7 @@ const TaskModal = ({ hideModal }: taskModalType) => {
           onClick={(e) => {
             e.stopPropagation();
           }}
-          className="modal relative z-[1000] mx-[1.6rem] h-fit rounded-[0.6rem] bg-white p-[2.4rem]"
+          className="modal relative max-w-[48rem] z-[1000] mx-[1.6rem] h-fit rounded-[0.6rem] bg-white p-[2.4rem]"
         >
           <div className="mb-[2.4rem] flex items-center justify-between">
             <p className="text-[1.80rem] font-bold leading-normal">

@@ -17,19 +17,19 @@ const SideBar = () => {
           ALL BOARDS (3)
         </p>
         <ul>
-          <li className="cursor-pointer flex hover:bg-main-purple transition-all duration-300 hover:text-white text-medium-grey  gap-[1.6rem] py-[1.5rem] pl-[3.2rem] rounded-r-full">
+          <li className="cursor-pointer flex bg-main-purple transition-all duration-300 text-white   gap-[1.6rem] py-[1.5rem] pl-[3.2rem] rounded-r-full">
             <img src={boardIcon} alt="board-icon" width={22} height={16} />
             <span className="text-[1.5rem] font-bold leading-normal">
               Platform Launch
             </span>
           </li>
-          <li className="cursor-pointer flex hover:bg-main-purple transition-all duration-300 hover:text-white text-medium-grey  gap-[1.6rem] py-[1.5rem] pl-[3.2rem] rounded-r-full">
+          <li className="cursor-pointer flex hover:bg-light-grey transition-all duration-300 hover:text-main-purple text-medium-grey  gap-[1.6rem] py-[1.5rem] pl-[3.2rem] rounded-r-full">
             <img src={boardIcon} alt="board-icon" width={22} height={16} />
             <span className="text-[1.5rem] font-bold leading-normal ">
               Marketing Plan
             </span>
           </li>
-          <li className="cursor-pointer flex hover:bg-main-purple transition-all duration-300 hover:text-white text-medium-grey  gap-[1.6rem] py-[1.5rem] pl-[3.2rem] rounded-r-full">
+          <li className="cursor-pointer flex hover:bg-light-grey transition-all duration-300 hover:text-main-purple text-medium-grey  gap-[1.6rem] py-[1.5rem] pl-[3.2rem] rounded-r-full">
             <img src={boardIcon} alt="board-icon" width={22} height={16} />
             <span className="text-[1.5rem] font-bold leading-normal ">
               Roadmap

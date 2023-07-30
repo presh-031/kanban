@@ -1,3 +1,7 @@
 export type taskModalType = {
-  hideModal: React.Dispatch<React.SetStateAction<boolean>>;
+  hideTaskModal: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+export type HeaderTypes = {
+  isBoardEmpty: boolean;
 };
