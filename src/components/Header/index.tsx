@@ -1,9 +1,9 @@
-import logoMobile from "../assets/assets/logo-mobile.svg";
-import arrowDown from "../assets/assets/icon-chevron-down.svg";
-import verticalEllipsis from "../assets/assets/icon-vertical-ellipsis.svg";
-import { GrAdd } from "react-icons/gr";
-import { HeaderTypes } from "../typings";
+import logoMobile from "../../assets/assets/logo-mobile.svg";
+import arrowDown from "../../assets/assets/icon-chevron-down.svg";
+import verticalEllipsis from "../../assets/assets/icon-vertical-ellipsis.svg";
+import { HeaderTypes } from "../../typings";
 // import "./Header.css";
+
 const Header = ({ isBoardEmpty }: HeaderTypes) => {
   return (
     <header className=" custom-width bg-white px-[1.6rem] w-[] py-[2rem] flex justify-between items-center">

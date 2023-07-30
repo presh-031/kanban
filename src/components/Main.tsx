@@ -2,7 +2,6 @@ import ActiveBoard from "./ActiveBoard";
 import EmptyBoard from "./EmptyBoard";
 import Header from "./Header";
 
-import useModal from "../hooks/useModal";
 const Main = () => {
   const isBoardEmpty = false;
 

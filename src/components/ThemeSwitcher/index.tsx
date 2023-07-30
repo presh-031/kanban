@@ -1,6 +1,4 @@
-import React from "react";
-
-import "./ThameSwitcher.css";
+import "./ThemeSwitcher.css";
 const ThemeSwitcher = () => {
   return (
     <div className="check">

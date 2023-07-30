@@ -1,4 +1,3 @@
-import React from "react";
 import TaskModal from "./TaskModal";
 import Modal from "./ui/Modal";
 

@@ -5,7 +5,7 @@ const TaskModal = ({ hideTaskModal }: taskModalType) => {
   return (
     <div
       onClick={() => {
-        hideTaskModal();
+        // hideTaskModal();
       }}
       className="overlay fixed left-0 top-0 right-0 z-[500] h-screen  bg-black bg-opacity-50"
     >
