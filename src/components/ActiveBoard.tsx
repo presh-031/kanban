@@ -2,6 +2,7 @@ import "./ActiveBoard.css";
 import BoardColumn from "./BoardColumn";
 
 import useModal from "../hooks/useModal";
+import NewColumn from "./NewColumn";
 const ActiveBoard = () => {
   const { isVisible, toggleModal } = useModal();
   return (
@@ -10,6 +11,7 @@ const ActiveBoard = () => {
       <BoardColumn />
       <BoardColumn />
       <BoardColumn />
+      <NewColumn />
     </div>
   );
 };
