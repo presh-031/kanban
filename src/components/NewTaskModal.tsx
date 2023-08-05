@@ -1,7 +1,7 @@
-import { useState } from "react";
 import close from "../assets/assets/icon-cross.svg";
+import { NewTaskModalTypes } from "../typings";
 
-const NewTaskModal = ({ toggleModal }) => {
+const NewTaskModal = ({ toggleModal }: NewTaskModalTypes) => {
   return (
     <div
       onClick={() => {

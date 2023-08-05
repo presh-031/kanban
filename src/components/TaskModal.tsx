@@ -20,7 +20,7 @@ const TaskModal = ({ toggleModal }: TaskModalTypes) => {
         <div
           onClick={(e) => {
             e.stopPropagation();
-            toggleDropdown();
+            setIsOpen(false);
           }}
           className="modal relative max-w-[48rem] z-[1000] mx-[1.6rem] h-fit rounded-[0.6rem] bg-white p-[2.4rem]"
         >
@@ -29,7 +29,14 @@ const TaskModal = ({ toggleModal }: TaskModalTypes) => {
               Research pricing points of various competitors and trial different
               business models
             </p>
-            <img src={verticalEllipsis} alt="menu" onClick={toggleDropdown} />
+            <img
+              src={verticalEllipsis}
+              alt="menu"
+              onClick={(e) => {
+                e.stopPropagation();
+                toggleDropdown();
+              }}
+            />
             <div className="relative inline-block text-left">
               {isOpen && <TaskModalDropDown />}
             </div>
