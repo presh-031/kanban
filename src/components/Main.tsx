@@ -1,6 +1,4 @@
-import ActiveBoard from "./ActiveBoard";
-import EmptyBoard from "./EmptyBoard";
-import Header from "./Header";
+import { Header, ActiveBoard, EmptyBoard } from "../index";
 
 const Main = () => {
   const isBoardEmpty = false;

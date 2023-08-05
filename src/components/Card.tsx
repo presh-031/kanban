@@ -1,5 +1,4 @@
-import TaskModal from "./TaskModal";
-import Modal from "./ui/Modal";
+import { TaskModal, Modal } from "../index";
 
 import useModal from "../hooks/useModal";
 

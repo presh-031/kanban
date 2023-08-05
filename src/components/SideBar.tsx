@@ -3,7 +3,8 @@ import hideSideBar from "../assets/assets/icon-hide-sidebar.svg";
 import boardIcon from "../assets/assets/icon-board.svg";
 import lightThemeIcon from "../assets/assets/icon-light-theme.svg";
 import darkThemeIcon from "../assets/assets/icon-dark-theme.svg";
-import ThemeSwitcher from "./ThemeSwitcher";
+
+import { ThemeSwitcher } from "../index";
 
 const SideBar = () => {
   return (
