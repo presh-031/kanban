@@ -20,6 +20,7 @@ const TaskModal = ({ toggleModal }: TaskModalTypes) => {
         <div
           onClick={(e) => {
             e.stopPropagation();
+            toggleDropdown();
           }}
           className="modal relative max-w-[48rem] z-[1000] mx-[1.6rem] h-fit rounded-[0.6rem] bg-white p-[2.4rem]"
         >
@@ -83,27 +84,32 @@ const TaskModal = ({ toggleModal }: TaskModalTypes) => {
 };
 
 const TaskModalDropDown = () => {
-  const options = ["Edit Task", "Delete Task"];
-
   return (
-    <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-      <div
-        className="py-1"
+    <div
+      onClick={(e) => {
+        e.stopPropagation();
+      }}
+      className="origin-top-right  absolute right-0 mt-2 w-[19.2rem] rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+    >
+      <ul
+        className="p-[1.6rem]"
         role="menu"
         aria-orientation="vertical"
         aria-labelledby="options-menu"
       >
-        {options.map((option, index) => (
-          <a
-            key={index}
-            href="#"
-            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-            role="menuitem"
-          >
-            {option}
-          </a>
-        ))}
-      </div>
+        <li
+          className="  cursor-pointer mb-[1.6rem] text-[1.3rem] font-medium leading-[2.3rem] text-medium-grey"
+          role="menuitem"
+        >
+          Edit Task
+        </li>
+        <li
+          className=" text-[1.3rem]  cursor-pointer font-medium leading-[2.3rem] text-red"
+          role="menuitem"
+        >
+          Delete Task
+        </li>
+      </ul>
     </div>
   );
 };

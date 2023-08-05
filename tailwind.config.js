@@ -12,6 +12,7 @@ export default {
 
         "lines-light": "#E4EBFA",
 
+        red: "#EA5555",
         black: "#000112",
       },
     },
