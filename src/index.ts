@@ -1,7 +1,6 @@
 export { default as Main } from "./components/Main";
 export { default as SideBar } from "./components/SideBar";
 export { default as ThemeSwitcher } from "./components/ThemeSwitcher/index";
-
 export { default as Header } from "./components/Header/index";
 export { default as ActiveBoard } from "./components/ActiveBoard/index";
 export { default as EmptyBoard } from "./components/EmptyBoard";

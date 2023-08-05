@@ -17,13 +17,13 @@ const TaskModal = ({ toggleModal }: TaskModalTypes) => {
           className="modal relative max-w-[48rem] z-[1000] mx-[1.6rem] h-fit rounded-[0.6rem] bg-white p-[2.4rem]"
         >
           <div className="mb-[2.4rem] flex items-center justify-between">
-            <p className="text-[1.80rem] font-bold leading-normal">
+            <p className="text-[1.80rem] w-[27.4rem]  font-bold leading-normal">
               Research pricing points of various competitors and trial different
               business models
             </p>
             <img src={verticalEllipsis} alt="menu" />
           </div>
-          <p className="font-medium mb-[2.4rem]  text-medium-grey text-[1.3rem] leading-[2.3rem]">
+          <p className="font-medium w-[29.5rem] mb-[2.4rem]  text-medium-grey text-[1.3rem] leading-[2.3rem]">
             We know what we're planning to build for version one. Now we need to
             finalise the first pricing model we'll use. Keep iterating the
             subtasks until we have a coherent proposition.
