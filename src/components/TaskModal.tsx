@@ -1,7 +1,14 @@
 import { TaskModalTypes } from "../typings";
 
 import verticalEllipsis from "../assets/assets/icon-vertical-ellipsis.svg";
+import { useState } from "react";
 const TaskModal = ({ toggleModal }: TaskModalTypes) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div
       onClick={() => {
@@ -21,8 +28,12 @@ const TaskModal = ({ toggleModal }: TaskModalTypes) => {
               Research pricing points of various competitors and trial different
               business models
             </p>
-            <img src={verticalEllipsis} alt="menu" />
+            <img src={verticalEllipsis} alt="menu" onClick={toggleDropdown} />
+            <div className="relative inline-block text-left">
+              {isOpen && <TaskModalDropDown />}
+            </div>
           </div>
+
           <p className="font-medium w-[29.5rem] mb-[2.4rem]  text-medium-grey text-[1.3rem] leading-[2.3rem]">
             We know what we're planning to build for version one. Now we need to
             finalise the first pricing model we'll use. Keep iterating the
@@ -71,4 +82,29 @@ const TaskModal = ({ toggleModal }: TaskModalTypes) => {
   );
 };
 
+const TaskModalDropDown = () => {
+  const options = ["Edit Task", "Delete Task"];
+
+  return (
+    <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+      <div
+        className="py-1"
+        role="menu"
+        aria-orientation="vertical"
+        aria-labelledby="options-menu"
+      >
+        {options.map((option, index) => (
+          <a
+            key={index}
+            href="#"
+            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+            role="menuitem"
+          >
+            {option}
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+};
 export default TaskModal;

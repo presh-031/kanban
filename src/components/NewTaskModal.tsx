@@ -1,3 +1,4 @@
+import { useState } from "react";
 import close from "../assets/assets/icon-cross.svg";
 
 const NewTaskModal = ({ toggleModal }) => {
@@ -15,15 +16,15 @@ const NewTaskModal = ({ toggleModal }) => {
           }}
           className="modal relative max-w-[48rem] z-[1000] mx-[1.6rem] h-fit rounded-[0.6rem] bg-white p-[2.4rem]"
         >
-          <p className="text-[1.80rem] w-[27.4rem]  font-bold leading-normal">
+          <p className="text-[1.80rem] mb-[2.4rem] w-[27.4rem]  font-bold leading-normal">
             Add New Task
           </p>
 
-          <form>
+          <form className="flex flex-col gap-[2.4rem]">
             <div>
               <label
                 htmlFor="title"
-                className="text-medium-grey text-[1.2rem] font-bold leading-normal"
+                className="text-medium-grey block mb-[0.8rem] text-[1.2rem] font-bold leading-normal"
               >
                 Title
               </label>
@@ -41,7 +42,7 @@ const NewTaskModal = ({ toggleModal }) => {
               {" "}
               <label
                 htmlFor="description"
-                className="text-medium-grey text-[1.2rem] font-bold leading-normal"
+                className="text-medium-grey block mb-[0.8rem] text-[1.2rem] font-bold leading-normal"
               >
                 Description
               </label>
@@ -78,7 +79,7 @@ const NewTaskModal = ({ toggleModal }) => {
 
 const NewSubtasks = () => {
   return (
-    <>
+    <div>
       <p className="mb-[.8rem] text-medium-grey text-[1.2rem] font-bold leading-normal">
         Subtasks
       </p>
@@ -96,7 +97,7 @@ const NewSubtasks = () => {
       <button className="w-full block rounded-[2rem] py-[.8rem] text-main-purple bg-main-purple bg-opacity-10 text-[1.3rem] font-bold leading-[2.3rem]">
         +Add New Subtask
       </button>
-    </>
+    </div>
   );
 };
 
