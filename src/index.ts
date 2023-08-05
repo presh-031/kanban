@@ -9,3 +9,4 @@ export { default as Modal } from "./components/ui/Modal";
 export { default as Card } from "./components/Card";
 export { default as BoardColumn } from "./components/BoardColumn";
 export { default as NewColumn } from "./components/NewColumn/index";
+export { default as NewTaskModal } from "./components/NewTaskModal";
