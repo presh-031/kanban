@@ -11,6 +11,13 @@ export type NewTaskModalTypes = {
   toggleModal: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
+export type DeleteTaskModalTypes = {
+  toggleDeleteTaskModal: React.Dispatch<React.SetStateAction<boolean>>;
+};
+export type EditTaskModalTypes = {
+  toggleEditTaskModal: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
 export type HeaderTypes = {
   isBoardEmpty: boolean;
 };

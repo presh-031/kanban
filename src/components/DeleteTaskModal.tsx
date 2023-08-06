@@ -1,4 +1,6 @@
-const DeleteTaskModal = ({ toggleDeleteTaskModal }) => {
+import { DeleteTaskModalTypes } from "../typings";
+
+const DeleteTaskModal = ({ toggleDeleteTaskModal }: DeleteTaskModalTypes) => {
   return (
     <div
       onClick={() => {
@@ -24,7 +26,9 @@ const DeleteTaskModal = ({ toggleDeleteTaskModal }) => {
             Delete
           </button>
           <button
-            onClick={toggleDeleteTaskModal}
+            onClick={() => {
+              toggleDeleteTaskModal;
+            }}
             className="py-[.8rem] w-full text-main-purple text-[1.3rem] bg-main-purple bg-opacity-10 rounded-[2rem] font-bold leading-[2.3rem]"
           >
             Cancel

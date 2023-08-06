@@ -5,12 +5,7 @@ import { HeaderTypes } from "../../typings";
 import useModal from "../../hooks/useModal";
 import { useState } from "react";
 
-import {
-  BoardHeaderDropDown,
-  Modal,
-  NewTaskModal,
-  TaskModalDropDown,
-} from "../../index";
+import { BoardHeaderDropDown, Modal, NewTaskModal } from "../../index";
 // import "./Header.css";
 
 const Header = ({ isBoardEmpty }: HeaderTypes) => {

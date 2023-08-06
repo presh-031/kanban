@@ -1,7 +1,6 @@
-import verticalEllipsis from "../assets/assets/icon-vertical-ellipsis.svg";
-import { useState } from "react";
-import { SubTasks, TaskModalDropDown } from "../index";
-const EditTaskModal = ({ toggleEditTaskModal }) => {
+import { SubTasks } from "../index";
+import { EditTaskModalTypes } from "../typings";
+const EditTaskModal = ({ toggleEditTaskModal }: EditTaskModalTypes) => {
   return (
     <div
       onClick={() => {
