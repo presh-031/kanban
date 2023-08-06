@@ -1,7 +1,7 @@
-import { DeleteTaskModal, EditTaskModal, Modal, TaskModal } from "..";
+import { DeleteTaskModal, EditTaskModal, Modal } from "..";
 import useModal from "../hooks/useModal";
 
-const TaskModalDropDown = ({ toggleTaskModal }) => {
+const TaskModalDropDown = () => {
   const {
     isVisible: isDeleteTaskModalVisible,
     toggleModal: toggleDeleteTaskModal,
