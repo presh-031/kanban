@@ -1,10 +1,15 @@
-import { DeleteTaskModal, Modal, TaskModal } from "..";
+import { DeleteTaskModal, EditTaskModal, Modal, TaskModal } from "..";
 import useModal from "../hooks/useModal";
 
 const TaskModalDropDown = ({ toggleTaskModal }) => {
   const {
     isVisible: isDeleteTaskModalVisible,
     toggleModal: toggleDeleteTaskModal,
+  } = useModal();
+
+  const {
+    isVisible: isEditTaskModalVisible,
+    toggleModal: toggleEditTaskModal,
   } = useModal();
   return (
     <div
@@ -21,11 +26,15 @@ const TaskModalDropDown = ({ toggleTaskModal }) => {
       >
         <li
           role="menuitem"
-          onClick={toggleTaskModal}
+          onClick={toggleEditTaskModal}
           className="  cursor-pointer mb-[1.6rem] text-[1.3rem] font-medium leading-[2.3rem] text-medium-grey"
         >
           Edit Task
         </li>
+        <Modal isVisible={isEditTaskModalVisible}>
+          <EditTaskModal toggleEditTaskModal={toggleEditTaskModal} />
+        </Modal>
+
         <li
           role="menuitem"
           onClick={() => {

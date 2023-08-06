@@ -1,11 +1,11 @@
-import { SubTasks } from "..";
-import { NewTaskModalTypes } from "../typings";
-
-const NewTaskModal = ({ toggleModal }: NewTaskModalTypes) => {
+import verticalEllipsis from "../assets/assets/icon-vertical-ellipsis.svg";
+import { useState } from "react";
+import { SubTasks, TaskModalDropDown } from "../index";
+const EditTaskModal = ({ toggleEditTaskModal }) => {
   return (
     <div
       onClick={() => {
-        toggleModal(false);
+        toggleEditTaskModal(false);
       }}
       className="overlay fixed left-0 top-0 right-0 z-[500] h-screen  bg-black bg-opacity-50"
     >
@@ -17,7 +17,7 @@ const NewTaskModal = ({ toggleModal }: NewTaskModalTypes) => {
           className="modal relative max-w-[48rem] z-[1000] mx-[1.6rem] h-fit rounded-[0.6rem] bg-white p-[2.4rem]"
         >
           <p className="text-[1.80rem] mb-[2.4rem] w-[27.4rem]  font-bold leading-normal">
-            Add New Task
+            Edit task
           </p>
 
           <form className="flex flex-col gap-[2.4rem]">
@@ -32,7 +32,7 @@ const NewTaskModal = ({ toggleModal }: NewTaskModalTypes) => {
                 type="text"
                 name="title"
                 id="title"
-                placeholder="e.g. Take coffee break"
+                // value should be already existing task name
                 className="rounded-[.4rem] outline-none text-[1.3rem] font-medium leading-[2.3rem] py-[.8rem] px-[1.6rem] block w-full border-[1px] border-opacity-25"
                 style={{ borderColor: "rgba(130, 143, 163, 0.25)" }}
               />
@@ -77,4 +77,4 @@ const NewTaskModal = ({ toggleModal }: NewTaskModalTypes) => {
   );
 };
 
-export default NewTaskModal;
+export default EditTaskModal;

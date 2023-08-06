@@ -12,3 +12,6 @@ export { default as NewColumn } from "./components/NewColumn/index";
 export { default as NewTaskModal } from "./components/NewTaskModal";
 export { default as TaskModalDropDown } from "./components/TaskModalDropDown";
 export { default as DeleteTaskModal } from "./components/DeleteTaskModal";
+export { default as EditTaskModal } from "./components/EditTaskModal";
+export { default as SubTasks } from "./components/SubTasks";
+export { default as BoardHeaderDropDown } from "./components/BoardHeaderDropdown";

@@ -32,7 +32,7 @@ const TaskModal = ({ toggleTaskModal }: TaskModalTypes) => {
             </p>
             <img
               src={verticalEllipsis}
-              alt="menu"
+              alt="task-menu"
               onClick={(e) => {
                 e.stopPropagation();
                 toggleDropdown();

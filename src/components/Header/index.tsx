@@ -3,13 +3,26 @@ import arrowDown from "../../assets/assets/icon-chevron-down.svg";
 import verticalEllipsis from "../../assets/assets/icon-vertical-ellipsis.svg";
 import { HeaderTypes } from "../../typings";
 import useModal from "../../hooks/useModal";
+import { useState } from "react";
 
-import { Modal, NewTaskModal } from "../../index";
+import {
+  BoardHeaderDropDown,
+  Modal,
+  NewTaskModal,
+  TaskModalDropDown,
+} from "../../index";
 // import "./Header.css";
 
 const Header = ({ isBoardEmpty }: HeaderTypes) => {
   // Modal logic
   const { isVisible, toggleModal } = useModal();
+
+  // dropdown logic
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <header className=" custom-width bg-white px-[1.6rem] w-[] py-[2rem] flex justify-between items-center">
@@ -30,7 +43,15 @@ const Header = ({ isBoardEmpty }: HeaderTypes) => {
           <span className="text-3xl">+</span>
           <span className="hidden sm:block text-[1.5rem]">Add New Task</span>
         </button>
-        <img src={verticalEllipsis} alt="menu" className="  cursor-pointer" />
+        <img
+          src={verticalEllipsis}
+          alt="menu"
+          onClick={toggleDropdown}
+          className="  cursor-pointer"
+        />
+        <div className="relative inline-block text-left">
+          {isOpen && <BoardHeaderDropDown />}
+        </div>
       </div>
 
       <Modal isVisible={isVisible}>
