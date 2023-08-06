@@ -13,9 +13,9 @@ const Header = ({ isBoardEmpty }: HeaderTypes) => {
 
   return (
     <header className=" custom-width bg-white px-[1.6rem] w-[] py-[2rem] flex justify-between items-center">
-      <div className="flex items-center">
+      <div className="items-center flex">
         <img src={logoMobile} alt="logo" />
-        <p className="text-[1.8rem] mr-[.80rem] ml-[.80rem] text-[#000112] font-bold leading-normal">
+        <p className="mr-[.80rem] text-[1.8rem]  ml-[.80rem] text-[#000112] font-bold leading-normal">
           Platform Launch
         </p>
         <img src={arrowDown} alt="arrow-down" />

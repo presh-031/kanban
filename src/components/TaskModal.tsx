@@ -2,7 +2,8 @@ import { TaskModalTypes } from "../typings";
 
 import verticalEllipsis from "../assets/assets/icon-vertical-ellipsis.svg";
 import { useState } from "react";
-const TaskModal = ({ toggleModal }: TaskModalTypes) => {
+import { TaskModalDropDown } from "../index";
+const TaskModal = ({ toggleTaskModal }: TaskModalTypes) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -12,7 +13,7 @@ const TaskModal = ({ toggleModal }: TaskModalTypes) => {
   return (
     <div
       onClick={() => {
-        toggleModal(false);
+        toggleTaskModal(false);
       }}
       className="overlay fixed left-0 top-0 right-0 z-[500] h-screen  bg-black bg-opacity-50"
     >
@@ -38,7 +39,9 @@ const TaskModal = ({ toggleModal }: TaskModalTypes) => {
               }}
             />
             <div className="relative inline-block text-left">
-              {isOpen && <TaskModalDropDown />}
+              {isOpen && (
+                <TaskModalDropDown toggleTaskModal={toggleTaskModal} />
+              )}
             </div>
           </div>
 
@@ -90,34 +93,4 @@ const TaskModal = ({ toggleModal }: TaskModalTypes) => {
   );
 };
 
-const TaskModalDropDown = () => {
-  return (
-    <div
-      onClick={(e) => {
-        e.stopPropagation();
-      }}
-      className="origin-top-right  absolute right-0 mt-2 w-[19.2rem] rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
-    >
-      <ul
-        className="p-[1.6rem]"
-        role="menu"
-        aria-orientation="vertical"
-        aria-labelledby="options-menu"
-      >
-        <li
-          className="  cursor-pointer mb-[1.6rem] text-[1.3rem] font-medium leading-[2.3rem] text-medium-grey"
-          role="menuitem"
-        >
-          Edit Task
-        </li>
-        <li
-          className=" text-[1.3rem]  cursor-pointer font-medium leading-[2.3rem] text-red"
-          role="menuitem"
-        >
-          Delete Task
-        </li>
-      </ul>
-    </div>
-  );
-};
 export default TaskModal;

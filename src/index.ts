@@ -10,3 +10,5 @@ export { default as Card } from "./components/Card";
 export { default as BoardColumn } from "./components/BoardColumn";
 export { default as NewColumn } from "./components/NewColumn/index";
 export { default as NewTaskModal } from "./components/NewTaskModal";
+export { default as TaskModalDropDown } from "./components/TaskModalDropDown";
+export { default as DeleteTaskModal } from "./components/DeleteTaskModal";

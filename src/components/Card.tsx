@@ -3,18 +3,18 @@ import { TaskModal, Modal } from "../index";
 import useModal from "../hooks/useModal";
 
 const Card = () => {
-  // Modal logic
-  const { isVisible, toggleModal } = useModal();
+  const { isVisible: isTaskModalVisible, toggleModal: toggleTaskModal } =
+    useModal();
 
   return (
     <div>
-      <Modal isVisible={isVisible}>
-        <TaskModal toggleModal={toggleModal} />
+      <Modal isVisible={isTaskModalVisible}>
+        <TaskModal toggleTaskModal={toggleTaskModal} />
       </Modal>
 
       <li
         onClick={() => {
-          toggleModal();
+          toggleTaskModal();
         }}
         className="group cursor-pointer py-[2.3rem] rounded-[.8rem] shadow-custom px-[1.6rem] bg-white w-[28rem]"
       >
