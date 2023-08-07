@@ -39,9 +39,7 @@ const TaskModal = ({ toggleTaskModal }: TaskModalTypes) => {
               }}
             />
             <div className="relative inline-block text-left">
-              {isOpen && (
-                <TaskModalDropDown toggleTaskModal={toggleTaskModal} />
-              )}
+              {isOpen && <TaskModalDropDown />}
             </div>
           </div>
 
